@@ -15,26 +15,26 @@ A modern, user-friendly car rental platform built with React, featuring intellig
 ## Project Requirements Met
 
 ### Core Requirements
-- ✅ Single Page Application (SPA) using create-react-app (Vite)
-- ✅ 5+ organized React components:
+-  Single Page Application (SPA) using create-react-app (Vite)
+-  5+ organized React components:
   1. `Navigation` - Responsive navigation bar
   2. `HomePage` - Landing page with hero section
   3. `CarList` - Display car inventory
   4. `AddCar` - Controlled form for adding cars
   5. `TripForm` - Trip details input form
   6. Plus: `About`, `Login`, `SignUp`, `FindCar` pages
-- ✅ 3+ client-side routes with React Router:
+- 3+ client-side routes with React Router:
   - `/` - Home
   - `/find-cars` - Browse cars
   - `/about` - About SPINZ
   - `/login` - User login
   - `/signup` - User registration
-- ✅ RESTful API with json-server
-- ✅ GET request to fetch cars (App.jsx:15-18)
-- ✅ POST request with controlled form (AddCar.jsx:48-68)
-- ✅ State update after POST request (AddCar.jsx:52 → App.jsx:22-24)
-- ✅ Styling with Tailwind CSS
-- ✅ Firebase Authentication
+-  RESTful API with json-server
+-  GET request to fetch cars (App.jsx:15-18)
+-  POST request with controlled form (AddCar.jsx:48-68)
+-  State update after POST request (AddCar.jsx:52 → App.jsx:22-24)
+-  Styling with Tailwind CSS
+-  Firebase Authentication
 
 ## Tech Stack
 
@@ -169,7 +169,6 @@ Located at `src/App.jsx`
 ## Features in Detail
 
 ### 1. Car Browsing & Filtering
-- Browse all available rental cars
 - Filter by category (Economy, SUV, Luxury, Van)
 - Sort by price, rating, or passenger capacity
 - Responsive card-based layout
@@ -246,13 +245,12 @@ For json-server in production, consider using a proper backend like:
 
 ## License
 
-This project is licensed under the MIT License.
+This project is for educational purpose.
 
 ## Contact
 
 For questions or feedback, please contact:
-- Email: support@spinz.com
-- Website: [SPINZ](https://spinz.com)
+- github : kenshar
 
 ---
 
