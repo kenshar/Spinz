@@ -1,15 +1,34 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 import CarList from '../components/CarList';
 import AddCar from '../components/AddCar';
 
 function FindCar({ cars, addCar }) {
+  const location = useLocation();
+  const tripData = location.state?.tripData;
+
   const [filterCategory, setFilterCategory] = useState('All');
   const [sortBy, setSortBy] = useState('price-low');
+  const [matchedCars, setMatchedCars] = useState(cars);
+
+  // Filter cars based on trip requirements
+  useEffect(() => {
+    if (tripData) {
+      const { passengers, luggage } = tripData;
+      const filtered = cars.filter(car =>
+        car.passengers >= parseInt(passengers) &&
+        car.luggage >= parseInt(luggage)
+      );
+      setMatchedCars(filtered);
+    } else {
+      setMatchedCars(cars);
+    }
+  }, [tripData, cars]);
 
   // Filter cars by category
   const filteredCars = filterCategory === 'All'
-    ? cars
-    : cars.filter((car) => car.category === filterCategory);
+    ? matchedCars
+    : matchedCars.filter((car) => car.category === filterCategory);
 
   // Sort cars
   const sortedCars = [...filteredCars].sort((a, b) => {
@@ -36,6 +55,18 @@ function FindCar({ cars, addCar }) {
         <p className="text-lg text-gray-600">
           Browse our extensive collection of rental vehicles
         </p>
+        {tripData && (
+          <div className="mt-4 p-4 bg-primary-50 border border-primary-200 rounded-lg">
+            <p className="text-primary-800 font-medium">
+              Showing cars for {tripData.passengers} passenger(s) with {tripData.luggage} bag(s)
+            </p>
+            {tripData.destination && (
+              <p className="text-primary-700 text-sm mt-1">
+                Destination: {tripData.destination} | {tripData.pickupDate} to {tripData.returnDate} ({tripData.duration} day(s))
+              </p>
+            )}
+          </div>
+        )}
       </div>
 
       {/* Add Car Form */}

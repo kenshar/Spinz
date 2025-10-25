@@ -11,14 +11,15 @@
       "luggage": 3,
       "transmission": "Automatic",
       "fuelType": "Hybrid",
-      "pricePerDay": 45,
+      "pricePerDay": 5850,
       "mileageLimit": 200,
       "image": "https://images.unsplash.com/photo-1621007947382-bb3c3994e3fb?w=400",
       "rating": 4.5,
       "reviews": 128,
       "features": ["Bluetooth", "Backup Camera", "GPS", "USB Ports"],
       "insurance": "Basic included",
-      "available": true
+      "available": true,
+      "dealer": "Simba Corp Kenya"
     },
     {
       "id": 2,
@@ -31,14 +32,15 @@
       "luggage": 4,
       "transmission": "Automatic",
       "fuelType": "Gasoline",
-      "pricePerDay": 65,
+      "pricePerDay": 8450,
       "mileageLimit": 250,
       "image": "https://images.unsplash.com/photo-1519641471654-76ce0107ad1b?w=400",
       "rating": 4.7,
       "reviews": 95,
       "features": ["AWD", "Sunroof", "Apple CarPlay", "Lane Assist"],
       "insurance": "Basic included",
-      "available": true
+      "available": true,
+      "dealer": "DT Dobie Kenya"
     },
     {
       "id": 3,
@@ -51,14 +53,15 @@
       "luggage": 8,
       "transmission": "Automatic",
       "fuelType": "Diesel",
-      "pricePerDay": 95,
+      "pricePerDay": 12350,
       "mileageLimit": 300,
       "image": "https://images.unsplash.com/photo-1527786356703-4b100091cd2c?w=400",
       "rating": 4.3,
       "reviews": 67,
       "features": ["Rear AC", "Tow Hitch", "Cruise Control", "Power Windows"],
       "insurance": "Basic included",
-      "available": true
+      "available": true,
+      "dealer": "CMC Motors"
     },
     {
       "id": 4,
@@ -71,14 +74,15 @@
       "luggage": 2,
       "transmission": "Automatic",
       "fuelType": "Electric",
-      "pricePerDay": 85,
+      "pricePerDay": 11050,
       "mileageLimit": 200,
       "image": "https://images.unsplash.com/photo-1560958089-b8a1929cea89?w=400",
       "rating": 4.8,
       "reviews": 142,
       "features": ["Autopilot", "Premium Audio", "Glass Roof", "Supercharging"],
       "insurance": "Premium included",
-      "available": true
+      "available": true,
+      "dealer": "Sameer Africa"
     },
     {
       "id": 5,
@@ -91,14 +95,15 @@
       "luggage": 2,
       "transmission": "Manual",
       "fuelType": "Gasoline",
-      "pricePerDay": 35,
+      "pricePerDay": 4550,
       "mileageLimit": 150,
       "image": "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?w=400",
       "rating": 4.1,
       "reviews": 89,
       "features": ["Bluetooth", "Air Conditioning", "USB Port"],
       "insurance": "Basic included",
-      "available": true
+      "available": true,
+      "dealer": "Toyota Kenya"
     },
     {
       "id": 6,
@@ -111,14 +116,15 @@
       "luggage": 3,
       "transmission": "Automatic",
       "fuelType": "Gasoline",
-      "pricePerDay": 78,
+      "pricePerDay": 10140,
       "mileageLimit": 200,
       "image": "https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?w=400",
       "rating": 4.6,
       "reviews": 103,
       "features": ["4x4", "Removable Top", "Off-Road Package", "Winch"],
       "insurance": "Basic included",
-      "available": true
+      "available": true,
+      "dealer": "Simba Corp Kenya"
     }
   ],
   "bookings": [

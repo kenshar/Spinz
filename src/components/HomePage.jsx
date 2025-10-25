@@ -1,10 +1,13 @@
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import TripForm from '../cars/TripForm';
 
 function HomePage() {
+  const navigate = useNavigate();
+
   const handleTripSubmit = (tripData) => {
     console.log('Trip data submitted:', tripData);
-    // You can store this in state or navigate to FindCar with the data
+    // Navigate to FindCar page with trip data as state
+    navigate('/find-cars', { state: { tripData } });
   };
 
   return (
@@ -19,12 +22,6 @@ function HomePage() {
             <p className="text-xl md:text-2xl mb-8 text-primary-100">
               Smart matching. Transparent pricing. Stress-free booking.
             </p>
-            <Link
-              to="/find-cars"
-              className="inline-block bg-white text-primary-600 px-8 py-3 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors"
-            >
-              Browse All Cars
-            </Link>
           </div>
         </div>
       </section>
