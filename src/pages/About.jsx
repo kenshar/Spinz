@@ -2,7 +2,7 @@ const About = () => {
   return (
     <div className="min-h-screen bg-gray-50 flex-1">
       {/* Header */}
-      <div className="bg-purple-600 text-white py-8 sm:py-12">
+      <div className="bg-green-600 text-white py-8 sm:py-12">
         <div className="max-w-4xl mx-auto px-4 sm:px-6">
           <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-2 sm:mb-3">About SPINZ</h1>
           <p className="text-base sm:text-lg">Smart car rental made simple</p>
@@ -32,25 +32,25 @@ const About = () => {
             your trip needs and providing transparent, side-by-side comparisons.
           </p>
           <div className="grid md:grid-cols-2 gap-3 sm:gap-4">
-            <div className="border-l-4 border-purple-600 pl-3 sm:pl-4">
+            <div className="border-l-4 border-blue-600 pl-3 sm:pl-4">
               <h3 className="font-bold mb-1 sm:mb-2 text-sm sm:text-base"> Smart Matching</h3>
               <p className="text-xs sm:text-sm text-gray-600">
                 Tell us your trip details and we'll recommend the best vehicles
               </p>
             </div>
-            <div className="border-l-4 border-purple-600 pl-3 sm:pl-4">
+            <div className="border-l-4 border-blue-600 pl-3 sm:pl-4">
               <h3 className="font-bold mb-1 sm:mb-2 text-sm sm:text-base"> Clear Pricing</h3>
               <p className="text-xs sm:text-sm text-gray-600">
                 See total costs upfront with no hidden fees
               </p>
             </div>
-            <div className="border-l-4 border-purple-600 pl-3 sm:pl-4">
+            <div className="border-l-4 border-blue-600 pl-3 sm:pl-4">
               <h3 className="font-bold mb-1 sm:mb-2 text-sm sm:text-base"> Easy Comparison</h3>
               <p className="text-xs sm:text-sm text-gray-600">
                 Compare up to 3 vehicles side-by-side
               </p>
             </div>
-            <div className="border-l-4 border-purple-600 pl-3 sm:pl-4">
+            <div className="border-l-4 border-blue-600 pl-3 sm:pl-4">
               <h3 className="font-bold mb-1 sm:mb-2 text-sm sm:text-base"> Trusted Reviews</h3>
               <p className="text-xs sm:text-sm text-gray-600">
                 Real ratings from verified customers
@@ -63,29 +63,17 @@ const About = () => {
         <section className="bg-white rounded-lg shadow-md p-4 sm:p-6 md:p-8">
           <h2 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4">Key Features</h2>
           <ul className="space-y-2 sm:space-y-3">
-            <li className="flex items-start gap-2 sm:gap-3">
-              <span className="text-green-600 text-lg sm:text-xl">✓</span>
-              <div className="text-sm sm:text-base">
-                <strong>Trip-based search</strong> - Find cars that match your specific needs
-              </div>
+            <li className="text-sm sm:text-base">
+              <strong>Trip-based search</strong> - Find cars that match your specific needs
             </li>
-            <li className="flex items-start gap-2 sm:gap-3">
-              <span className="text-green-600 text-lg sm:text-xl">✓</span>
-              <div className="text-sm sm:text-base">
-                <strong>Filter & sort</strong> - Quickly narrow down your options
-              </div>
+            <li className="text-sm sm:text-base">
+              <strong>Filter & sort</strong> - Quickly narrow down your options
             </li>
-            <li className="flex items-start gap-2 sm:gap-3">
-              <span className="text-green-600 text-lg sm:text-xl">✓</span>
-              <div className="text-sm sm:text-base">
-                <strong>Vehicle comparison</strong> - Make informed decisions
-              </div>
+            <li className="text-sm sm:text-base">
+              <strong>Vehicle comparison</strong> - Make informed decisions
             </li>
-            <li className="flex items-start gap-2 sm:gap-3">
-              <span className="text-green-600 text-lg sm:text-xl">✓</span>
-              <div className="text-sm sm:text-base">
-                <strong>Mobile-friendly</strong> - Book on any device
-              </div>
+            <li className="text-sm sm:text-base">
+              <strong>Mobile-friendly</strong> - Book on any device
             </li>
           </ul>
         </section>
