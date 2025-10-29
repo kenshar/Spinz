@@ -12,32 +12,13 @@ function Footer() {
             </p>
           </div>
 
-          <div>
-            <h4 className="font-semibold mb-4">Quick Links</h4>
-            <ul className="space-y-2">
-              <li>
-                <Link to="/" className="text-blue-100 hover:text-white transition-colors">
-                  Home
-                </Link>
-              </li>
-              <li>
-                <Link to="/find-cars" className="text-blue-100 hover:text-white transition-colors">
-                  Find Cars
-                </Link>
-              </li>
-              <li>
-                <Link to="/about" className="text-blue-100 hover:text-white transition-colors">
-                  About
-                </Link>
-              </li>
-            </ul>
-          </div>
+          
 
           <div>
             <h4 className="font-semibold mb-4">Contact</h4>
             <ul className="space-y-2 text-blue-100">
               <li>Email: info@spinz.com</li>
-              <li>Phone: +254 700 000 000</li>
+              <li>Phone: +254 700 123 456</li>
               <li>Address: Nairobi, Kenya</li>
             </ul>
           </div>
