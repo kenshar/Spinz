@@ -1,7 +1,7 @@
 {
   "cars": [
     {
-      "id": 1,
+      "id": "1",
       "make": "Toyota",
       "model": "Camry",
       "year": 2023,
@@ -16,13 +16,18 @@
       "image": "https://images.unsplash.com/photo-1621007947382-bb3c3994e3fb?w=400",
       "rating": 4.5,
       "reviews": 128,
-      "features": ["Bluetooth", "Backup Camera", "GPS", "USB Ports"],
+      "features": [
+        "Bluetooth",
+        "Backup Camera",
+        "GPS",
+        "USB Ports"
+      ],
       "insurance": "Basic included",
       "available": true,
       "dealer": "Simba Corp Kenya"
     },
     {
-      "id": 2,
+      "id": "2",
       "make": "Honda",
       "model": "CR-V",
       "year": 2024,
@@ -37,13 +42,18 @@
       "image": "https://images.unsplash.com/photo-1519641471654-76ce0107ad1b?w=400",
       "rating": 4.7,
       "reviews": 95,
-      "features": ["AWD", "Sunroof", "Apple CarPlay", "Lane Assist"],
+      "features": [
+        "AWD",
+        "Sunroof",
+        "Apple CarPlay",
+        "Lane Assist"
+      ],
       "insurance": "Basic included",
       "available": true,
       "dealer": "DT Dobie Kenya"
     },
     {
-      "id": 3,
+      "id": "3",
       "make": "Ford",
       "model": "Transit",
       "year": 2023,
@@ -58,13 +68,18 @@
       "image": "https://images.unsplash.com/photo-1527786356703-4b100091cd2c?w=400",
       "rating": 4.3,
       "reviews": 67,
-      "features": ["Rear AC", "Tow Hitch", "Cruise Control", "Power Windows"],
+      "features": [
+        "Rear AC",
+        "Tow Hitch",
+        "Cruise Control",
+        "Power Windows"
+      ],
       "insurance": "Basic included",
       "available": true,
       "dealer": "CMC Motors"
     },
     {
-      "id": 4,
+      "id": "4",
       "make": "Tesla",
       "model": "Model 3",
       "year": 2024,
@@ -79,13 +94,18 @@
       "image": "https://images.unsplash.com/photo-1560958089-b8a1929cea89?w=400",
       "rating": 4.8,
       "reviews": 142,
-      "features": ["Autopilot", "Premium Audio", "Glass Roof", "Supercharging"],
+      "features": [
+        "Autopilot",
+        "Premium Audio",
+        "Glass Roof",
+        "Supercharging"
+      ],
       "insurance": "Premium included",
       "available": true,
       "dealer": "Sameer Africa"
     },
     {
-      "id": 5,
+      "id": "5",
       "make": "Chevrolet",
       "model": "Spark",
       "year": 2023,
@@ -100,13 +120,17 @@
       "image": "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?w=400",
       "rating": 4.1,
       "reviews": 89,
-      "features": ["Bluetooth", "Air Conditioning", "USB Port"],
+      "features": [
+        "Bluetooth",
+        "Air Conditioning",
+        "USB Port"
+      ],
       "insurance": "Basic included",
       "available": true,
       "dealer": "Toyota Kenya"
     },
     {
-      "id": 6,
+      "id": "6",
       "make": "Jeep",
       "model": "Wrangler",
       "year": 2024,
@@ -121,15 +145,44 @@
       "image": "https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?w=400",
       "rating": 4.6,
       "reviews": 103,
-      "features": ["4x4", "Removable Top", "Off-Road Package", "Winch"],
+      "features": [
+        "4x4",
+        "Removable Top",
+        "Off-Road Package",
+        "Winch"
+      ],
       "insurance": "Basic included",
       "available": true,
       "dealer": "Simba Corp Kenya"
+    },
+    {
+      "id": "b6a6",
+      "make": "Toyota",
+      "model": "Alphard",
+      "year": 2025,
+      "type": "Van",
+      "category": "Economy",
+      "passengers": 5,
+      "luggage": 8,
+      "transmission": "Automatic",
+      "fuelType": "Diesel",
+      "pricePerDay": 10000,
+      "mileageLimit": 217,
+      "image": "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?w=400",
+      "rating": 4,
+      "reviews": 0,
+      "insurance": "Basic included",
+      "available": true,
+      "features": [
+        "Bluetooth",
+        "Air Conditioning",
+        "USB Port"
+      ]
     }
   ],
   "bookings": [
     {
-      "id": 1,
+      "id": "1",
       "carId": 1,
       "destination": "Los Angeles",
       "pickupDate": "2025-11-01",
@@ -141,10 +194,13 @@
   ],
   "users": [
     {
-      "id": 1,
+      "id": "1",
       "name": "Demo User",
       "email": "demo@spinz.com",
-      "savedCars": [1, 4]
+      "savedCars": [
+        1,
+        4
+      ]
     }
   ]
 }
