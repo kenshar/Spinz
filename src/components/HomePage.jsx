@@ -1,4 +1,4 @@
-import { Link, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import TripForm from '../cars/TripForm';
 
 function HomePage() {
@@ -120,22 +120,6 @@ function HomePage() {
               </p>
             </div>
           </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-16 bg-primary-600 text-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold mb-4">Ready to Hit the Road?</h2>
-          <p className="text-xl mb-8 text-primary-100">
-            Join thousands of satisfied customers who found their perfect rental car with SPINZ
-          </p>
-          <Link
-            to="/signup"
-            className="inline-block bg-white text-primary-600 px-8 py-3 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors"
-          >
-            Get Started Today
-          </Link>
         </div>
       </section>
     </div>
