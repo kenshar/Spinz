@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { AuthProvider } from './contexts/AuthContext';
 import Navigation from './components/Navigation';
+import Footer from './components/Footer';
 import HomePage from './components/HomePage';
 import About from './pages/About';
 import FindCar from './pages/FindCar';
@@ -27,15 +28,18 @@ function App() {
   return (
     <AuthProvider>
       <Router>
-        <div className="min-h-screen">
+        <div className="min-h-screen flex flex-col">
           <Navigation />
-          <Routes>
-            <Route path="/" element={<HomePage />} />
-            <Route path="/find-cars" element={<FindCar cars={cars} addCar={addCar} />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/login" element={<Login />} />
-            <Route path="/signup" element={<SignUp />} />
-          </Routes>
+          <div className="flex-1">
+            <Routes>
+              <Route path="/" element={<HomePage />} />
+              <Route path="/find-cars" element={<FindCar cars={cars} addCar={addCar} />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/login" element={<Login />} />
+              <Route path="/signup" element={<SignUp />} />
+            </Routes>
+          </div>
+          <Footer />
         </div>
       </Router>
     </AuthProvider>
