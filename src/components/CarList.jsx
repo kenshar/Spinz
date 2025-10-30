@@ -61,12 +61,12 @@ function CarList({ cars }) {
             <div className="border-t pt-4">
               <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3">
                 <div>
-                  <p className="text-xl sm:text-2xl font-bold text-primary-600">
+                  <p className="text-xl sm:text-2xl font-bold text-black">
                     KSh {car.pricePerDay.toLocaleString()}
                   </p>
                   <p className="text-xs text-gray-500">per day</p>
                 </div>
-                <button className="w-full sm:w-auto bg-primary-600 text-white px-4 py-2.5 sm:px-5 md:px-6 rounded-lg hover:bg-primary-700 transition-all duration-200 font-medium text-sm sm:text-base whitespace-nowrap hover:shadow-lg active:scale-95">
+                <button className="w-full sm:w-auto bg-blue-600 text-white px-4 py-2.5 sm:px-5 md:px-6 rounded-lg hover:bg-blue-700 transition-all duration-200 font-medium text-sm sm:text-base whitespace-nowrap hover:shadow-lg active:scale-95">
                   Book Now
                 </button>
               </div>
