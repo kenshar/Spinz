@@ -1,9 +1,33 @@
+import { useState } from 'react';
+import BookingModal from './BookingModal';
+
 /**
  * CarList Component
  * Displays a grid of available rental cars with their details
  * @param {Array} cars - Array of car objects to display
+ * @param {Object} tripData - Trip data from search form (optional)
+ * @param {Function} onBook - Callback when booking is made
  */
-function CarList({ cars }) {
+function CarList({ cars, tripData = null, onBook }) {
+  const [selectedCar, setSelectedCar] = useState(null);
+  const [showBookingModal, setShowBookingModal] = useState(false);
+
+  const handleBookNow = (car) => {
+    setSelectedCar(car);
+    setShowBookingModal(true);
+  };
+
+  const handleCloseModal = () => {
+    setShowBookingModal(false);
+    setSelectedCar(null);
+  };
+
+  const handleBooking = (booking) => {
+    if (onBook) {
+      onBook(booking);
+    }
+    handleCloseModal();
+  };
   // Show message if no cars are available
   if (cars.length === 0) {
     return (
@@ -87,7 +111,10 @@ function CarList({ cars }) {
                 </div>
 
                 {/* Book Now button */}
-                <button className="w-full sm:w-auto bg-blue-600 text-white px-5 py-2.5 sm:px-6 md:px-7 rounded-lg hover:bg-blue-700 transition-all duration-200 font-medium text-sm sm:text-base whitespace-nowrap hover:shadow-lg active:scale-95 min-h-[44px]">
+                <button
+                  onClick={() => handleBookNow(car)}
+                  className="w-full sm:w-auto bg-blue-600 text-white px-5 py-2.5 sm:px-6 md:px-7 rounded-lg hover:bg-blue-700 transition-all duration-200 font-medium text-sm sm:text-base whitespace-nowrap hover:shadow-lg active:scale-95 min-h-[44px]"
+                >
                   Book Now
                 </button>
               </div>
@@ -100,6 +127,16 @@ function CarList({ cars }) {
           </div>
         </div>
       ))}
+
+      {/* Booking Modal */}
+      {showBookingModal && selectedCar && (
+        <BookingModal
+          car={selectedCar}
+          tripData={tripData}
+          onClose={handleCloseModal}
+          onBook={handleBooking}
+        />
+      )}
     </div>
   );
 }

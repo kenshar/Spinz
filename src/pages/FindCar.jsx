@@ -3,7 +3,7 @@ import { useLocation } from 'react-router-dom';
 import CarList from '../components/CarList';
 import AddCar from '../components/AddCar';
 
-function FindCar({ cars, addCar }) {
+function FindCar({ cars, addCar, onBook }) {
   const location = useLocation();
   const tripData = location.state?.tripData;
 
@@ -119,7 +119,7 @@ function FindCar({ cars, addCar }) {
       </div>
 
       {/* Car List */}
-      <CarList cars={sortedCars} />
+      <CarList cars={sortedCars} tripData={tripData} onBook={onBook} />
     </div>
   );
 }

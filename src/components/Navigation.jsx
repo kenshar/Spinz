@@ -23,6 +23,7 @@ function Navigation() {
   const navLinks = [
     { path: '/', label: 'Home' },
     { path: '/find-cars', label: 'Find Cars' },
+    { path: '/bookings', label: 'My Bookings' },
     { path: '/about', label: 'About' },
   ];
 
@@ -141,14 +142,18 @@ function Navigation() {
 
       {/* Mobile menu */}
       {isMenuOpen && (
-        <div className="md:hidden">
+        <div className="md:hidden bg-white border-t border-gray-200">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
             {navLinks.map((link) => (
               <Link
                 key={link.path}
                 to={link.path}
                 onClick={() => setIsMenuOpen(false)}
-                className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-primary-100 hover:text-primary-600"
+                className={`block px-3 py-2 rounded-md text-base font-medium transition-colors min-h-[44px] flex items-center ${
+                  isActive(link.path)
+                    ? 'bg-primary-100 text-primary-700'
+                    : 'text-gray-700 hover:bg-primary-50 hover:text-primary-600'
+                }`}
               >
                 {link.label}
               </Link>

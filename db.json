@@ -190,6 +190,27 @@
       "passengers": 2,
       "luggage": 2,
       "totalPrice": 180
+    },
+    {
+      "id": "266d",
+      "carId": "b6a6",
+      "carMake": "Toyota",
+      "carModel": "Alphard",
+      "carImage": "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?w=400",
+      "destination": "nanyuki",
+      "pickupDate": "2025-11-04",
+      "returnDate": "2025-11-29",
+      "passengers": 1,
+      "luggage": 3,
+      "specialNeeds": "",
+      "customerName": "fafu",
+      "customerEmail": "fafu@gmail.com",
+      "customerPhone": "+254 701 123 456",
+      "duration": 25,
+      "totalPrice": 250000,
+      "pricePerDay": 10000,
+      "status": "confirmed",
+      "bookingDate": "2025-11-03T05:08:38.388Z"
     }
   ],
   "users": [
