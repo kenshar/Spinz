@@ -12,10 +12,10 @@ const About = () => {
       <div className="max-w-4xl mx-auto px-4 sm:px-6 py-8 sm:py-12">
         {/* The Problem */}
         <section className="bg-white rounded-lg shadow-md p-4 sm:p-6 md:p-8 mb-6 sm:mb-8">
-          <h2 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4">The Problem</h2>
+          <h2 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4">About Spinz</h2>
           <p className="text-gray-700 mb-3 sm:mb-4 text-sm sm:text-base">
-            Finding the right rental car is overwhelming. Too many choices, unclear pricing,
-            and scattered reviews make it difficult to make confident decisions.
+            A competent car rental experience service provider. we are dedicated to simplifying the
+            car rental process. seamless and convinient car rental service at the comfort of your device.
           </p>
           <ul className="list-disc list-inside text-gray-700 space-y-2 text-sm sm:text-base">
             <li>Confusing pricing and hidden fees</li>
@@ -24,9 +24,9 @@ const About = () => {
           </ul>
         </section>
 
-        {/* Our Solution */}
+        {/* Core Values */}
         <section className="bg-white rounded-lg shadow-md p-4 sm:p-6 md:p-8 mb-6 sm:mb-8">
-          <h2 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4">Our Solution</h2>
+          <h2 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4">Core Values</h2>
           <p className="text-gray-700 mb-3 sm:mb-4 text-sm sm:text-base">
             SPINZ simplifies car rental by matching you with the perfect vehicle based on
             your trip needs and providing transparent, side-by-side comparisons.
