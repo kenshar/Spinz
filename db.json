@@ -211,6 +211,28 @@
       "pricePerDay": 10000,
       "status": "confirmed",
       "bookingDate": "2025-11-03T05:08:38.388Z"
+    },
+    {
+      "id": "e6d7",
+      "carId": "3",
+      "carMake": "Ford",
+      "carModel": "Transit",
+      "carImage": "https://images.unsplash.com/photo-1527786356703-4b100091cd2c?w=400",
+      "destination": "nanyuki",
+      "pickupDate": "2025-11-04",
+      "returnDate": "2025-11-29",
+      "passengers": 4,
+      "luggage": 5,
+      "specialNeeds": "",
+      "customerName": "fafu",
+      "customerEmail": "fafu@gmail.com",
+      "customerPhone": "+254 701 123 456",
+      "userId": "qURviyeNxreC7mCAauwrXY7wU5q2",
+      "duration": 25,
+      "totalPrice": 308750,
+      "pricePerDay": 12350,
+      "status": "confirmed",
+      "bookingDate": "2025-11-03T05:27:34.268Z"
     }
   ],
   "users": [

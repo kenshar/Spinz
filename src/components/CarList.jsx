@@ -1,4 +1,6 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { useAuth } from '../contexts/AuthContext';
 import BookingModal from './BookingModal';
 
 /**
@@ -11,8 +13,19 @@ import BookingModal from './BookingModal';
 function CarList({ cars, tripData = null, onBook }) {
   const [selectedCar, setSelectedCar] = useState(null);
   const [showBookingModal, setShowBookingModal] = useState(false);
+  const { currentUser } = useAuth();
+  const navigate = useNavigate();
 
   const handleBookNow = (car) => {
+    // Check if user is logged in
+    if (!currentUser) {
+      // Store the intended booking in session storage to resume after login
+      sessionStorage.setItem('intendedBooking', JSON.stringify({ car, tripData }));
+      alert('Please log in to book a car');
+      navigate('/login');
+      return;
+    }
+
     setSelectedCar(car);
     setShowBookingModal(true);
   };

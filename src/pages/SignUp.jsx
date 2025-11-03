@@ -37,7 +37,17 @@ function SignUp() {
       setError('');
       setLoading(true);
       await signup(formData.email, formData.password);
-      navigate('/');
+
+      // Check if there's an intended booking stored
+      const intendedBooking = sessionStorage.getItem('intendedBooking');
+      if (intendedBooking) {
+        // Clear the stored booking
+        sessionStorage.removeItem('intendedBooking');
+        // Navigate to find cars page (where the booking modal will be triggered)
+        navigate('/find-cars');
+      } else {
+        navigate('/');
+      }
     } catch (err) {
       setError('Failed to create an account. Email may already be in use.');
       console.error('Signup error:', err);

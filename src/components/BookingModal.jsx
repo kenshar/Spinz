@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { useAuth } from '../contexts/AuthContext';
 
 /**
  * BookingModal Component
@@ -11,6 +12,7 @@ import { useNavigate } from 'react-router-dom';
  */
 function BookingModal({ car, onClose, onBook, tripData = null }) {
   const navigate = useNavigate();
+  const { currentUser } = useAuth();
   const today = new Date().toISOString().split('T')[0];
 
   const [formData, setFormData] = useState({
@@ -21,7 +23,7 @@ function BookingModal({ car, onClose, onBook, tripData = null }) {
     luggage: tripData?.luggage || 1,
     specialNeeds: tripData?.specialNeeds || '',
     customerName: '',
-    customerEmail: '',
+    customerEmail: currentUser?.email || '',
     customerPhone: ''
   });
 
@@ -70,6 +72,7 @@ function BookingModal({ car, onClose, onBook, tripData = null }) {
       customerName: formData.customerName,
       customerEmail: formData.customerEmail,
       customerPhone: formData.customerPhone,
+      userId: currentUser?.uid,
       duration,
       totalPrice,
       pricePerDay: car.pricePerDay,
@@ -96,9 +99,8 @@ function BookingModal({ car, onClose, onBook, tripData = null }) {
       setIsSubmitting(false);
       onClose();
 
-      // Show success message and redirect to bookings page
+      // Show success message
       alert(`Booking confirmed! Total: KSh ${totalPrice.toLocaleString()}`);
-      navigate('/bookings');
     } catch (error) {
       console.error('Error creating booking:', error);
       alert('Failed to create booking. Please try again.');

@@ -6,7 +6,6 @@ import Footer from './components/Footer';
 import HomePage from './components/HomePage';
 import About from './pages/About';
 import FindCar from './pages/FindCar';
-import Bookings from './pages/Bookings';
 import Login from './pages/Login';
 import SignUp from './pages/SignUp';
 
@@ -49,7 +48,6 @@ function App() {
             <Routes>
               <Route path="/" element={<HomePage />} />
               <Route path="/find-cars" element={<FindCar cars={cars} addCar={addCar} onBook={addBooking} />} />
-              <Route path="/bookings" element={<Bookings />} />
               <Route path="/about" element={<About />} />
               <Route path="/login" element={<Login />} />
               <Route path="/signup" element={<SignUp />} />

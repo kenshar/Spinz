@@ -17,7 +17,17 @@ function Login() {
       setError('');
       setLoading(true);
       await login(email, password);
-      navigate('/');
+
+      // Check if there's an intended booking stored
+      const intendedBooking = sessionStorage.getItem('intendedBooking');
+      if (intendedBooking) {
+        // Clear the stored booking
+        sessionStorage.removeItem('intendedBooking');
+        // Navigate to find cars page (where the booking modal will be triggered)
+        navigate('/find-cars');
+      } else {
+        navigate('/');
+      }
     } catch (err) {
       setError('Failed to log in. Please check your credentials.');
       console.error('Login error:', err);

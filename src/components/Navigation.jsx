@@ -23,7 +23,6 @@ function Navigation() {
   const navLinks = [
     { path: '/', label: 'Home' },
     { path: '/find-cars', label: 'Find Cars' },
-    { path: '/bookings', label: 'My Bookings' },
     { path: '/about', label: 'About' },
   ];
 
