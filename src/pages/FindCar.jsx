@@ -47,21 +47,21 @@ function FindCar({ cars, addCar }) {
   });
 
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-      <div className="mb-8">
-        <h1 className="text-4xl font-bold text-gray-900 mb-2">
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8">
+      <div className="mb-6 sm:mb-8">
+        <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-2">
           Find Your Perfect Car
         </h1>
-        <p className="text-lg text-gray-600">
+        <p className="text-base sm:text-lg text-gray-600">
           Browse our extensive collection of rental vehicles
         </p>
         {tripData && (
-          <div className="mt-4 p-4 bg-primary-50 border border-primary-200 rounded-lg">
-            <p className="text-primary-800 font-medium">
+          <div className="mt-3 sm:mt-4 p-3 sm:p-4 bg-primary-50 border border-primary-200 rounded-lg">
+            <p className="text-primary-800 font-medium text-sm sm:text-base">
               Showing cars for {tripData.passengers} passenger(s) with {tripData.luggage} bag(s)
             </p>
             {tripData.destination && (
-              <p className="text-primary-700 text-sm mt-1">
+              <p className="text-primary-700 text-xs sm:text-sm mt-1">
                 Destination: {tripData.destination} | {tripData.pickupDate} to {tripData.returnDate} ({tripData.duration} day(s))
               </p>
             )}
@@ -73,16 +73,16 @@ function FindCar({ cars, addCar }) {
       <AddCar addCar={addCar} />
 
       {/* Filters and Sort */}
-      <div className="bg-white p-4 rounded-lg shadow-md mb-6">
-        <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
-          <div className="flex items-center gap-4">
-            <label className="text-sm font-medium text-gray-700">
+      <div className="bg-white p-3 sm:p-4 rounded-lg shadow-md mb-4 sm:mb-6">
+        <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-3 sm:gap-4">
+          <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4">
+            <label className="text-xs sm:text-sm font-medium text-gray-700 whitespace-nowrap">
               Filter by:
             </label>
             <select
               value={filterCategory}
               onChange={(e) => setFilterCategory(e.target.value)}
-              className="px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500"
+              className="px-3 py-2 sm:px-4 sm:py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 text-sm sm:text-base min-h-[44px]"
             >
               <option value="All">All Categories</option>
               <option value="Economy">Economy</option>
@@ -92,14 +92,14 @@ function FindCar({ cars, addCar }) {
             </select>
           </div>
 
-          <div className="flex items-center gap-4">
-            <label className="text-sm font-medium text-gray-700">
+          <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4">
+            <label className="text-xs sm:text-sm font-medium text-gray-700 whitespace-nowrap">
               Sort by:
             </label>
             <select
               value={sortBy}
               onChange={(e) => setSortBy(e.target.value)}
-              className="px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500"
+              className="px-3 py-2 sm:px-4 sm:py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 text-sm sm:text-base min-h-[44px]"
             >
               <option value="price-low">Price: Low to High</option>
               <option value="price-high">Price: High to Low</option>
@@ -111,8 +111,8 @@ function FindCar({ cars, addCar }) {
       </div>
 
       {/* Results Count */}
-      <div className="mb-4">
-        <p className="text-gray-600">
+      <div className="mb-3 sm:mb-4">
+        <p className="text-sm sm:text-base text-gray-600">
           Showing <span className="font-semibold">{sortedCars.length}</span>{' '}
           {sortedCars.length === 1 ? 'car' : 'cars'}
         </p>

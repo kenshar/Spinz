@@ -36,12 +36,12 @@ const TripForm = ({ onSubmit }) => {
   const today = new Date().toISOString().split('T')[0];
 
   return (
-    <form className="bg-white p-8 rounded-xl shadow-lg max-w-4xl mx-auto border border-gray-100" onSubmit={handleSubmit}>
-      <div className="flex flex-col gap-6 mb-8">
+    <form className="bg-white p-4 sm:p-6 md:p-8 rounded-xl shadow-lg max-w-4xl mx-auto border border-gray-100" onSubmit={handleSubmit}>
+      <div className="flex flex-col gap-4 sm:gap-6 mb-6 sm:mb-8">
         {/* Row 1: Destination and Pick-up Date */}
-        <div className="flex flex-col md:flex-row gap-6">
+        <div className="flex flex-col md:flex-row gap-4 sm:gap-6">
           <div className="flex flex-col flex-1">
-            <label htmlFor="destination" className="font-semibold mb-2 text-gray-700">Destination</label>
+            <label htmlFor="destination" className="font-semibold mb-2 text-sm sm:text-base text-gray-700">Destination</label>
             <input
               type="text"
               id="destination"
@@ -49,13 +49,13 @@ const TripForm = ({ onSubmit }) => {
               value={formData.destination}
               onChange={handleChange}
               placeholder="e.g Nanyuki, Nairobi, Mombasa"
-              className="p-4 border-2 border-gray-300 rounded-lg text-base transition-all focus:outline-none focus:border-purple-600 focus:ring-2 focus:ring-purple-200"
+              className="p-3 sm:p-4 border-2 border-gray-300 rounded-lg text-sm sm:text-base transition-all focus:outline-none focus:border-purple-600 focus:ring-2 focus:ring-purple-200 min-h-[44px]"
               required
             />
           </div>
 
           <div className="flex flex-col flex-1">
-            <label htmlFor="pickupDate" className="font-semibold mb-2 text-gray-700">Pick-up Date</label>
+            <label htmlFor="pickupDate" className="font-semibold mb-2 text-sm sm:text-base text-gray-700">Pick-up Date</label>
             <input
               type="date"
               id="pickupDate"
@@ -63,16 +63,16 @@ const TripForm = ({ onSubmit }) => {
               value={formData.pickupDate}
               onChange={handleChange}
               min={today}
-              className="p-4 border-2 border-gray-300 rounded-lg text-base transition-all focus:outline-none focus:border-purple-600 focus:ring-2 focus:ring-purple-200"
+              className="p-3 sm:p-4 border-2 border-gray-300 rounded-lg text-sm sm:text-base transition-all focus:outline-none focus:border-purple-600 focus:ring-2 focus:ring-purple-200 min-h-[44px]"
               required
             />
           </div>
         </div>
 
         {/* Row 2: Return Date and Passengers */}
-        <div className="flex flex-col md:flex-row gap-6">
+        <div className="flex flex-col md:flex-row gap-4 sm:gap-6">
           <div className="flex flex-col flex-1">
-            <label htmlFor="returnDate" className="font-semibold mb-2 text-gray-700">Return Date</label>
+            <label htmlFor="returnDate" className="font-semibold mb-2 text-sm sm:text-base text-gray-700">Return Date</label>
             <input
               type="date"
               id="returnDate"
@@ -80,19 +80,19 @@ const TripForm = ({ onSubmit }) => {
               value={formData.returnDate}
               onChange={handleChange}
               min={formData.pickupDate || today}
-              className="p-4 border-2 border-gray-300 rounded-lg text-base transition-all focus:outline-none focus:border-purple-600 focus:ring-2 focus:ring-purple-200"
+              className="p-3 sm:p-4 border-2 border-gray-300 rounded-lg text-sm sm:text-base transition-all focus:outline-none focus:border-purple-600 focus:ring-2 focus:ring-purple-200 min-h-[44px]"
               required
             />
           </div>
 
           <div className="flex flex-col flex-1">
-            <label htmlFor="passengers" className="font-semibold mb-2 text-gray-700">Passengers</label>
+            <label htmlFor="passengers" className="font-semibold mb-2 text-sm sm:text-base text-gray-700">Passengers</label>
             <select
               id="passengers"
               name="passengers"
               value={formData.passengers}
               onChange={handleChange}
-              className="p-4 border-2 border-gray-300 rounded-lg text-base transition-all focus:outline-none focus:border-purple-600 focus:ring-2 focus:ring-purple-200 bg-white"
+              className="p-3 sm:p-4 border-2 border-gray-300 rounded-lg text-sm sm:text-base transition-all focus:outline-none focus:border-purple-600 focus:ring-2 focus:ring-purple-200 bg-white min-h-[44px]"
               required
             >
               <option value="1">1 passenger</option>
@@ -107,15 +107,15 @@ const TripForm = ({ onSubmit }) => {
         </div>
 
         {/* Row 3: Luggage and Special Needs */}
-        <div className="flex flex-col md:flex-row gap-6">
+        <div className="flex flex-col md:flex-row gap-4 sm:gap-6">
           <div className="flex flex-col flex-1">
-            <label htmlFor="luggage" className="font-semibold mb-2 text-gray-700">Luggage</label>
+            <label htmlFor="luggage" className="font-semibold mb-2 text-sm sm:text-base text-gray-700">Luggage</label>
             <select
               id="luggage"
               name="luggage"
               value={formData.luggage}
               onChange={handleChange}
-              className="p-4 border-2 border-gray-300 rounded-lg text-base transition-all focus:outline-none focus:border-purple-600 focus:ring-2 focus:ring-purple-200 bg-white"
+              className="p-3 sm:p-4 border-2 border-gray-300 rounded-lg text-sm sm:text-base transition-all focus:outline-none focus:border-purple-600 focus:ring-2 focus:ring-purple-200 bg-white min-h-[44px]"
               required
             >
               <option value="1">1 bag</option>
@@ -127,7 +127,7 @@ const TripForm = ({ onSubmit }) => {
           </div>
 
           <div className="flex flex-col flex-1">
-            <label htmlFor="specialNeeds" className="font-semibold mb-2 text-gray-700">Special Needs (Optional)</label>
+            <label htmlFor="specialNeeds" className="font-semibold mb-2 text-sm sm:text-base text-gray-700">Special Needs (Optional)</label>
             <input
               type="text"
               id="specialNeeds"
@@ -135,13 +135,13 @@ const TripForm = ({ onSubmit }) => {
               value={formData.specialNeeds}
               onChange={handleChange}
               placeholder="e.g. abled differently, child seat, pet-friendly"
-              className="p-4 border-2 border-gray-300 rounded-lg text-base transition-all focus:outline-none focus:border-purple-600 focus:ring-2 focus:ring-purple-200"
+              className="p-3 sm:p-4 border-2 border-gray-300 rounded-lg text-sm sm:text-base transition-all focus:outline-none focus:border-purple-600 focus:ring-2 focus:ring-purple-200 min-h-[44px]"
             />
           </div>
         </div>
       </div>
 
-      <button type="submit" className="w-full py-4 px-6 border-none rounded-lg text-lg font-bold cursor-pointer transition-all bg-gradient-to-r from-purple-600 to-purple-800 text-white hover:-translate-y-1 hover:shadow-xl hover:from-purple-700 hover:to-purple-900">
+      <button type="submit" className="w-full py-3 sm:py-4 px-4 sm:px-6 border-none rounded-lg text-base sm:text-lg font-bold cursor-pointer transition-all bg-gradient-to-r from-purple-600 to-purple-800 text-white hover:-translate-y-1 hover:shadow-xl hover:from-purple-700 hover:to-purple-900 active:scale-95 min-h-[48px]">
         Find My Perfect Car
       </button>
     </form>
