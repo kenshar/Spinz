@@ -164,12 +164,6 @@ function Login() {
             </button>
           </div>
         </form>
-
-        <div className="text-center">
-          <p className="text-sm text-gray-600">
-            Demo credentials: demo@spinz.com / password123
-          </p>
-        </div>
       </div>
     </div>
   );
